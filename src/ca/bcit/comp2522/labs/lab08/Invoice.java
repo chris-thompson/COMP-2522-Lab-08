@@ -7,21 +7,21 @@ package ca.bcit.comp2522.labs.lab08;
  * @version 2021
  */
 public class Invoice implements Payable {
-    private final String partNumber;
+    private final int partNumber;
     private final String partDescription;
     private int quantity;
     private double pricePerItem;
 
     /**
      * Constructs an object of type Invoice.
-     * @param partNumber a String
+     * @param partNumber an int
      * @param partDescription a String
      * @param quantity an integer that is greater than or equal to zero
      * @param pricePerItem a double that is greater than or equal to zero
      * @throws IllegalArgumentException if quantity < 0
      * @throws IllegalArgumentException if prince < 0.00
      */
-    public Invoice(final String partNumber,
+    public Invoice(final int partNumber,
                    final String partDescription,
                    final int quantity,
                    final double pricePerItem) {
@@ -40,9 +40,9 @@ public class Invoice implements Payable {
 
     /**
      * Returns the part number.
-     * @return part number as a String
+     * @return part number as an int
      */
-    public String getPartNumber() {
+    public int getPartNumber() {
         return partNumber;
     }
 
